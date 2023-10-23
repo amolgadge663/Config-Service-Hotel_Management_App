@@ -1,0 +1,25 @@
+
+server:
+  port: 8085
+
+spring:
+  application:
+    name: CONFIG-SERVICE
+
+  cloud:
+    config:
+      server:
+        bootstrap: true
+        git:
+          uri: https://github.com/amolgadge663/Hotel_Management-ServerConfig
+          clone-on-start: true
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
